@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 package com.desafioalura.Desafio_LiterAlura.entity;
 
 import com.desafioalura.Desafio_LiterAlura.model.Datos;
 import com.desafioalura.Desafio_LiterAlura.model.DatosLibros;
 import jakarta.persistence.*;
-
-import java.util.OptionalDouble;
 
 @Entity
 public class Libro {
@@ -73,53 +70,4 @@ public class Libro {
         this.numeroDescargas = numeroDescargas;
     }
 }
-=======
-package com.desafioalura.Desafio_LiterAlura.entity;
 
-import jakarta.persistence.*;
-
-@Entity
-public class Libro {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String titulo;
-    private String idioma;
-
-    @ManyToOne
-    @JoinColumn(name = "autor_id")
-    private Autor autor;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getIdioma() {
-        return idioma;
-    }
-
-    public void setIdioma(String idioma) {
-        this.idioma = idioma;
-    }
-
-    public Autor getAutor() {
-        return autor;
-    }
-
-    public void setAutor(Autor autor) {
-        this.autor = autor;
-    }
-}
->>>>>>> 918d1a98f4c13e76bb18112723cafcf0183d12ab
